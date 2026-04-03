@@ -1,6 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import PromptTemplate
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
@@ -32,7 +33,8 @@ Instructions:
     )
 
     model = ChatGoogleGenerativeAI(
-        model= "gemini-2.5-flash"
+        model= "gemini-2.5-flash",
+        google_api_key=st.secrets["GOOGLE_API_KEY"]
     )
 
     chain = prompt | model

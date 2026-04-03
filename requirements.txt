@@ -23,3 +23,7 @@ faiss-cpu
 
 #youtube  api
 youtube-transcript-api
+
+#HF Embeddings
+sentence-transformers
+langchain-huggingface
